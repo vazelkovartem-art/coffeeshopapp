@@ -1,0 +1,75 @@
+﻿<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B4F1D2A-3C5E-4A9B-9C11-5A6B7C8D9E01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CoffeeShopApp</RootNamespace>
+    <AssemblyName>CoffeeShopApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ui\Theme.cs" />
+    <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\ClientRepository.cs" />
+    <Compile Include="Data\ProductRepository.cs" />
+    <Compile Include="Data\OrderRepository.cs" />
+    <Compile Include="Data\DeliveryRepository.cs" />
+    <Compile Include="Data\SupplierRepository.cs" />
+    <Compile Include="Models\Models.cs" />
+    <Compile Include="Forms\LoginForm.cs" />
+    <Compile Include="Forms\MainForm.cs" />
+    <Compile Include="Forms\ClientsForm.cs" />
+    <Compile Include="Forms\ClientEditForm.cs" />
+    <Compile Include="Forms\ProductsForm.cs" />
+    <Compile Include="Forms\ProductEditForm.cs" />
+    <Compile Include="Forms\OrdersForm.cs" />
+    <Compile Include="Forms\OrderEditForm.cs" />
+    <Compile Include="Forms\OrderItemDialog.cs" />
+    <Compile Include="Forms\StatusDialog.cs" />
+    <Compile Include="Forms\SuppliersForm.cs" />
+    <Compile Include="Forms\SupplierEditForm.cs" />
+    <Compile Include="Forms\DeliveriesForm.cs" />
+    <Compile Include="Forms\DeliveryEditForm.cs" />
+    <Compile Include="Forms\DeliveryItemDialog.cs" />
+    <Compile Include="Forms\DeliveryItemsDialog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
